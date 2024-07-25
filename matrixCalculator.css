@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+
+    background-color: black;
+
+    color: #2E8B5D;
+    font-family: "Orbitron", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+
+    background-color: black;
+    padding-top: 15px;
+    
+}
+
+    .title {
+        font-size: 60px;
+        line-height: 100px;
+
+        margin: 0 0 0 50px;
+
+        width: 16ch;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: .05em solid black;
+        animation: typing 2.5s steps(16), cursor 0.7s steps(17) infinite;
+    }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+
+        @keyframes cursor {
+            50% {
+                border-color: #2E8B5D;
+            }
+        }
+
+button {
+    cursor: pointer;
+}
+
+    button:hover,
+    input:hover {
+        background-color: #79BB9F;
+    }
+
+/*
+    button:focus, input:focus {
+        background-color: #C2B769;
+        border-color: #C2A069;
+        color: #C2A069;
+        
+    }
+    */
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+.mainArea {
+    margin: auto;
+    margin-top: 25px;
+
+    width: 1260px;
+    height: 620px;
+}
+
+    .calcArea {
+        width: 400px;
+        height: 100%;
+
+        margin: 5px;
+
+        padding-top: 5px;
+
+    }
+
+        .calcAreaBorder {
+            border: 3px solid #2E8B5D;
+        }
+
+        .interface {
+            width: 100%;
+            margin: auto;
+
+            text-align: center;
+
+            font-size: 1.3rem;
+
+            padding-top: 10px;
+        }
+
+        .sizeInput {
+            width: 60px;
+            height: 60px;
+            margin: 15px 10px 15px 10px;
+
+            background-color: #3d4340;
+            border: 3px solid #2E8B5D;
+            outline: none;
+
+            color: #2E8B5D;
+            font-family: "Orbitron", sans-serif;
+            font-size: 35px;
+            font-weight: 600;
+
+            text-align: center;
+        }
+
+    .matrixArea {
+        margin: auto;
+        margin-top: 10px;
+    }
+
+        .cell {
+            width: 34px;
+            height: 34px;
+
+            transition: 0.5s;
+        }
+
+.resultInput {
+    cursor: default;
+}
+
+.resultMatrixArea {
+    cursor: pointer;
+}
+
+.popup {
+    width: 100vw;
+    height: 100%;
+
+    cursor: pointer;
+    display: none;
+
+    background: rgba(0, 0, 0, 0.3);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+    .warningBox {
+        width: 500px;
+        height: 200px;
+
+        color: #2E8B5D;
+        background-color: #3d4340;
+        border: 15px solid #2E8B5D;
+
+        position: absolute;
+
+        top: 50%;
+        margin-top: -100px;
+        left: 50%;
+        margin-left: -250px;
+    }
+
+    .popupText {
+        margin: 10px;
+        font-size: 30px;
+    }
+        .textCenter {
+            text-align: center;
+        }
+
+        .verticalCenter {
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+
+.resultBox {
+    width: 900px;
+    height: 500px;
+
+    color: #2E8B5D;
+    background-color: #3d4340;
+    border: 15px solid #2E8B5D;
+    position: absolute;
+    top: 50%;
+    margin-top: -250px;
+    left: 50%;
+    margin-left: -450px;
+
+    cursor: pointer;
+}
+
+    .resultPopupContent {
+        margin: auto;
+    }
+
+    .resultPopupCell {
+        width: 80px;
+        height: 34px;
+    }
+
+.buttonStyle {
+    margin: 10px 3px 3px 3px;
+    width: 91px;
+    height: 45px;
+
+    border: 3px solid #2E8B5D;
+    
+    background-color: #3d4340;
+    
+    color: #2E8B5D;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Orbitron", sans-serif;
+}
+
+.cellDesign {
+    margin: 0 auto;
+    margin: 1px;
+
+    color: #2E8B5D;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+
+    background-color: #3d4340;
+    border: 1px solid #2E8B5D;
+    outline: none;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+
+    position: absolute;
+    top: calc( 100% - 120px );
+    left: 0;
+}
+
+    .footerContent {
+        font-size: 22px;
+        font-weight: 600;
+        font-family: "Orbitron", sans-serif;
+        color: #2E8B5D;
+        margin: 0 0 10px 30px;
+        margin-left: calc(100% - 300px);
+        line-height: 22px;
+
+    }
+
+.floatLeft {
+    float: left;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.default {
+    cursor: default;
+}
+

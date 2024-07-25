@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Matrix Calculator</title>
+	<link rel="icon" href="./images/neo.ico">
+
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="matrixCalculator.css">
+</head>
+
+<body>
+	<header>
+		<h1 class="title">MATRIX&nbsp;&nbsp;CALCULATOR</h1>
+	</header>
+	<main class="mainArea">
+		<section class="calcArea floatLeft calcAreaBorder">
+			<section class="interface">
+				Matrix A
+				<article class="matrixSize">
+					<input id="A_row" class="sizeInput" type="number" min="1" max="10" />
+					<i class="xi-close"></i>
+					<input id="A_column" class="sizeInput" type="number" min="1" max="10" />
+				</article>
+				<article class="buttonWrapper">
+					<button class="buttonStyle" id="A_printBtn">Print</button>
+					<button class="buttonStyle" id="A_randomBtn">Random</button>
+					<button class="buttonStyle" id="A_resetBtn">Reset</button>
+				</article>
+			</section>
+			<article id="A_matrixArea" class="matrixArea"></article>
+		</section>
+		<section class="calcArea floatLeft calcAreaBorder">
+			<section class="interface">
+				Matrix B
+				<article class="matrixSize">
+					<input id="B_row" class="sizeInput" type="number" min="1" max="10" />
+					<i class="xi-close"></i>
+					<input id="B_column" class="sizeInput" type="number" min="1" max="10" />
+				</article>
+				<article class="buttonWrapper">
+					<button class="buttonStyle" id="B_printBtn">Print</button>
+					<button class="buttonStyle" id="B_randomBtn">Random</button>
+					<button class="buttonStyle" id="B_resetBtn">Reset</button>
+				</article>
+			</section>
+			<article id="B_matrixArea" class="matrixArea"></article>
+		</section>
+		<section class="calcArea floatLeft calcAreaBorder">
+			<section class="interface">
+				RESULT
+				<article class="matrixSize">
+					<input id="Result_row" class="sizeInput resultInput" type="number" readonly />
+					<i class="xi-close"></i>
+					<input id="Result_column" class="sizeInput resultInput" type="number" readonly />
+				</article>
+				<article class="buttonWrapper">
+					<button class="buttonStyle" id="plusBtn">
+						<i class="xi-plus xi-2x"></i>
+					</button>
+					<button class="buttonStyle" id="minusBtn">
+						<i class="xi-minus xi-2x"></i>
+					</button>
+					<button class="buttonStyle" id="multipleBtn">
+						<i class="xi-close xi-2x"></i>
+					</button>
+				</article>
+			</section>
+			<article id="Result_matrixArea" class="matrixArea resultMatrixArea"></article>
+		</section>
+		<div id="warningPopup" class="popup">
+			<section id="warningBox" class="warningBox">
+				<h1 id="popupText" class="popupText verticalCenter">Check Your Matrix A or Matrix B.</h1>
+			</section>
+		</div>
+		<div id="resultPopup" class="popup">
+			<section id="resultBox" class="resultBox">
+				<h1 id="popupText" class="popupText textCenter"> Result Matrix</h1>
+				<section id="resultPopupContent" class="resultPopupContent"></section>
+			</section>
+		</div>
+	</main>
+	<footer id="footer" class="footer">
+		<p id="nameArea" class="footerContent"></p>
+		<p id="callArea" class="footerContent"></p>
+		<p id="emailArea" class="footerContent"></p>
+	</footer>
+
+	<script src="matrixCalculator.js"></script>
+</body>
+
+</html>
