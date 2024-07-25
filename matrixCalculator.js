@@ -185,15 +185,15 @@ const interfaceFunctions = {
     maxSizeMaker: (matrixs = []) => { // 내가 지정한 사이즈 보다 커지지 않게
         matrixs.forEach((matrix) => {
             matrix.rowInput.addEventListener("input", (event) => {
-                Number(event.target.value) > 10 ? matrix.rowInput.value = 10 : matrix.rowInput.value = Number(event.target.value);
-                Number(event.target.value) < 1 ? matrix.rowInput.value = 1 : matrix.rowInput.value = Number(event.target.value);
-                event.target.value === "-" ? matrix.rowInput.value = "" : matrix.rowInput.value = Number(event.target.value);
+                matrix.rowInput.value = Number(event.target.value) > 10 ? 10 : Number(event.target.value);
+                matrix.rowInput.value = Number(event.target.value) < 1 ? 1 : Number(event.target.value);
+                matrix.rowInput.value = event.target.value === "-" ? "" : Number(event.target.value);
 
             });
             matrix.columnInput.addEventListener("input", (event) => {
-                Number(event.target.value) > 10 ? matrix.columnInput.value = 10 : matrix.columnInput.value = Number(event.target.value);
-                Number(event.target.value) < 1 ? matrix.columnInput.value = 1 : matrix.columnInput.value = Number(event.target.value);
-                event.target.value === "-" ? matrix.columnInput.value = "" : matrix.columnInput.value = Number(event.target.value);
+                matrix.columnInput.value = Number(event.target.value) > 10 ? 10 : Number(event.target.value);
+                matrix.columnInput.value = Number(event.target.value) < 1 ? matrix.columnInput.value = 1 : matrix.columnInput.value = Number(event.target.value);
+                matrix.columnInput.value = event.target.value === "-" ? "" : Number(event.target.value);
             });
         });
     },
@@ -267,6 +267,11 @@ const interfaceFunctions = {
             }
         }
     },
+    setFooter: () => {
+	interfaceFunctions.footerContent( "nameArea",  "Juhwan Bae" );
+        interfaceFunctions.footerContent( "callArea",  "010-2167-2204" );
+        interfaceFunctions.footerContent( "emailArea",  "qo8373@naver.com" );
+    },
 }
 
 const runningCalcMatrix = (matrix) => {
@@ -319,6 +324,4 @@ runningResultMatrix(resultMatrix);
 
 // about public function
 interfaceFunctions.maxSizeMaker([matrixA, matrixB]);
-interfaceFunctions.footerContent( "nameArea",  "Juhwan Bae" );
-interfaceFunctions.footerContent( "callArea",  "010-2167-2204" );
-interfaceFunctions.footerContent( "emailArea",  "qo8373@naver.com" );
+interfaceFunctions.setFooter();

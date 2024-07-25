@@ -2,8 +2,8 @@
 <html lang="ko">
 
 <head>
-	<meta charset="utf-8" name="viewport">
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta charset="utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>Matrix Calculator</title>
 	<link rel="icon" href="./images/neo.ico">
 
@@ -22,7 +22,7 @@
 	<main class="mainArea">
 		<section class="calcArea floatLeft calcAreaBorder">
 			<section class="interface">
-				Matrix A
+				<h2 id="calcAreaTitle" class="calcAreaTitle">Matrix A</h2>
 				<article class="matrixSize">
 					<input id="A_row" class="sizeInput" type="number" min="1" max="10" />
 					<i class="xi-close"></i>
@@ -38,7 +38,7 @@
 		</section>
 		<section class="calcArea floatLeft calcAreaBorder">
 			<section class="interface">
-				Matrix B
+				<h2 id="calcAreaTitle" class="calcAreaTitle">Matrix B</h2>
 				<article class="matrixSize">
 					<input id="B_row" class="sizeInput" type="number" min="1" max="10" />
 					<i class="xi-close"></i>
@@ -54,7 +54,7 @@
 		</section>
 		<section class="calcArea floatLeft calcAreaBorder">
 			<section class="interface">
-				RESULT
+				<h2 id="calcAreaTitle" class="calcAreaTitle">RESULT</h2>
 				<article class="matrixSize">
 					<input id="Result_row" class="sizeInput resultInput" type="number" readonly />
 					<i class="xi-close"></i>
