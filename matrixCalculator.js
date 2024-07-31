@@ -55,7 +55,7 @@ const matrixFunctions = { // 함수 보관 객체
         }
     },
     printClick: (matrix) => { // 화면에 행렬 출력
-        matrix.matrixArea.style.width = `${38 * matrix.column}px`;
+        matrix.matrixArea.style.width = `${ Math.round(36 * matrix.column)}px`;
         for (let i = 0; i < matrix.row; i++) {
             for (let j = 0; j < matrix.column; j++) {
                 matrix.matrixArea.innerHTML += `<input id="cell${matrix.name}${i}${j}" class="cell cellDesign" type="text" />`;
@@ -142,7 +142,7 @@ const operator = {
             for (let i = 0; i < result.row; i++) {
                 for (let j = 0; j < result.column; j++) {
                     for (let k = 0; k < matrixA.column; k++) {
-                        console.log(`${i} ${j} : ${matrixA.data[i][k]} ${matrixB.data[k][j]}`);
+                        //console.log(`${i} ${j} : ${matrixA.data[i][k]} ${matrixB.data[k][j]}`);
                         result.data[i][j] += matrixA.data[i][k] * matrixB.data[k][j];
                     }
                 }
@@ -152,7 +152,7 @@ const operator = {
         }
     },
     resultPrint: (result) => { // 배열 출력
-        result.matrixArea.style.width = `${38 * result.column}px`;
+        result.matrixArea.style.width = `${36 * result.column}px`;
         for (let i = 0; i < result.row; i++) {
             for (let j = 0; j < result.column; j++) {
                 result.matrixArea.innerHTML += `<input id="cell${result.name}${i}${j}" class="cell cellDesign pointer" type="text" value="${result.data[i][j].toLocaleString("ko-KR")}" readonly />`;
@@ -259,7 +259,7 @@ const interfaceFunctions = {
     resultPopupPrint: (result) => { // 결과 행렬 팝업 컨텐츠 채우기
         const resultPopupContent = document.getElementById("resultPopupContent");
         resultPopupContent.style.width = `${84 * result.column}px`;
-        resultPopupContent.style.marginTop = `${ ( ( 500 - (38 * result.row) ) / 2 ) - 37 }px`
+        resultPopupContent.style.marginTop = `${ ( ( 500 - (36 * result.row) ) / 2 ) - 37 }px`
         resultPopupContent.innerHTML = "";
         for (let i = 0; i < result.row; i++) {
             for (let j = 0; j < result.column; j++) {

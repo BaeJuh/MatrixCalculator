@@ -36,6 +36,7 @@ header {
         white-space: nowrap;
         border-right: .05em solid black;
         animation: typing 3s steps(17), cursor 0.7s steps(17) infinite;
+	animation-delay: 0.2s
     }
 
         @keyframes typing {
@@ -136,7 +137,24 @@ button {
             height: 34px;
 
             transition: 0.5s;
+            box-sizing: border-box;
         }
+
+        .cellDesign {
+            margin: 0 auto;
+            margin: 1px;
+        
+            color: #2E8B5D;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: "Orbitron", sans-serif;
+            text-align: center;
+        
+            background-color: #3d4340;
+            border: 1px solid #2E8B5D;
+            outline: none;
+        }
+        
 
 .resultInput {
     cursor: default;
@@ -229,20 +247,6 @@ button {
     font-family: "Orbitron", sans-serif;
 }
 
-.cellDesign {
-    margin: 0 auto;
-    margin: 1px;
-
-    color: #2E8B5D;
-    font-size: 16px;
-    font-weight: 600;
-    font-family: "Orbitron", sans-serif;
-    text-align: center;
-
-    background-color: #3d4340;
-    border: 1px solid #2E8B5D;
-    outline: none;
-}
 
 .footer {
     width: 100%;

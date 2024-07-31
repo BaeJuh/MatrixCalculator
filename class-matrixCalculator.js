@@ -1,3 +1,67 @@
+class Matrix {
+    constructor( id ) {
+        this.id = id; // String
+        this.row = 0; // Number
+        this.column = 0; // Number
+        this.rowInput = ""; // Element
+        this.columnInput = ""; // Element
+        this.printBtn = ""; // Element
+        this.randomBtn = ""; // Element
+        this.matrixArea = ""; // Element
+        this.data = []; // Array
+        this.isReady = false; // Boolean
+    }
+    setElements ( rowInput, columnInput, printBtn, randomBtn, matrixArea ) {
+        this.rowInput = document.getElementById( rowInput );
+        this.columnInput = document.getElementById( columnInput );
+        this.printBtn = document.getElementById( printBtn );
+        this.randomBtn = document.getElementById( randomBtn );
+        this.matrixArea = document.getElementById( matrixArea );
+    }
+
+    setMatrix (  ) {
+        this.row = Number( this.rowInput.value );
+        this.column = Number( this.columnInput.value );
+        this.matrixArea.innerHTML = "";
+    }
+    setData(  ) {
+        for ( let i=0; i<this.row; i++ ) {
+            this.data[i] = [];
+            for ( let j=0; j<this.column; j++ ) {
+                this.data[i][j] = 0;
+            }
+        }
+    }
+    printClick(  ) {
+        this.matrixArea.style.width = `${ 38 * this.column } px`;
+        for( let i=0; i<this.row; i++ ) {
+            for ( let j=0; j<this.column; j++ ) {
+                this.matrixArea.innerHTML += `<input id="cell${i}${j}" class="cell cellDesign" type="text" />`;
+            }
+        }
+    }
+    printProcessor(  ) {
+        this.setMatrix();
+        this.printClick();
+        this.setData();
+
+        this.isReady = true;
+        // interfaceFunctions.cellException();
+    }
+    updateData( event ) {
+
+
+    }
+    randomClick(  ) {
+
+
+    }
+    resetClick(  ) {
+
+
+    }
+}
+
 const matrixA = {
     name: "A",
     row: 0,
@@ -55,7 +119,7 @@ const matrixFunctions = { // 함수 보관 객체
         }
     },
     printClick: (matrix) => { // 화면에 행렬 출력
-        matrix.matrixArea.style.width = `${38 * matrix.column}px`;
+        matrix.matrixArea.style.width = `${38 * matrix.column} px`;
         for (let i = 0; i < matrix.row; i++) {
             for (let j = 0; j < matrix.column; j++) {
                 matrix.matrixArea.innerHTML += `<input id="cell${matrix.name}${i}${j}" class="cell cellDesign" type="text" />`;
@@ -268,7 +332,7 @@ const interfaceFunctions = {
         }
     },
     setFooter: () => {
-	interfaceFunctions.footerContent( "nameArea",  "Juhwan Bae" );
+        interfaceFunctions.footerContent( "nameArea",  "Juhwan Bae" );
         interfaceFunctions.footerContent( "callArea",  "010-2167-2204" );
         interfaceFunctions.footerContent( "emailArea",  "qo8373@naver.com" );
     },
